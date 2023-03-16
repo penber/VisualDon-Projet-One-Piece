@@ -29,3 +29,8 @@ Référence 🔎
 
 
 Pour notre projet, on a pu trouver des données similaires sur Kaggle, un site qui propose une multitude de datasets sur différents sujets, dont One Piece. Ces données ont été collectées et analysées par des fans de la série, ce qui en fait une source fiable et pertinente pour notre projet de visualisation de données. On peut également se référer à One Piece Wiki, un site qui fournit une mine d'informations sur l'univers du manga, y compris des descriptions détaillées des personnages, des lieux, des événements et des objets. Enfin, on peut s'appuyer sur la communauté active de fans de One Piece sur Reddit qui partage des analyses et des interprétations de l'univers du manga, ainsi que des données sur les personnages et les arcs de l'histoire. Ces sources d'informations nous ont été très utiles pour la réalisation de notre projet de visualisation de données sur One Piece.
+
+
+Wireframe 📝
+
+Lien vers notre figma :) https://www.figma.com/file/6FTCN769WD4iuSNV4uYCik/Untitled?node-id=25%3A2&t=HwnwBBKRA3dncs9P-1
