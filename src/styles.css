@@ -1,0 +1,735 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+  font-family: 'Bebas Neue', sans-serif;
+
+
+}
+
+
+#sections2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+    background-color:#ddc99780; 
+   
+}
+
+.section div  {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff00;
+
+}
+
+.section img {
+	max-width: 100%;
+	height: auto;
+
+}
+
+.section h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.section p {
+	font-size: 18px;
+	line-height: 1.5;
+    text-align: center;
+    }
+    
+    .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+    background-color: #0056b3;
+    }
+
+    .section:first-of-type {
+        position: relative;
+
+        background-image: url("./Image/acceuil/background.jpg");
+        background-size: 100%;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    
+    }
+
+
+    #logoacceuil{
+      padding-top: 5vh;
+         width: 40vw;
+         display: block;
+         margin: 0 auto;
+         
+     animation: rocking 5s ease-in-out infinite;
+     }
+ 
+     @keyframes rocking {
+       0%, 100% {
+         transform: rotateZ(-1deg) rotateY(0deg) translateX(-2);
+       }
+       25% {
+         transform: rotateZ(2deg) rotateY(2deg) translateX(-1px);
+       }
+       50% {
+         transform: rotateZ(1deg) rotateY(1deg) translateX(1);
+       }
+       75% {
+         transform: rotateZ(-2deg) rotateY(-3deg) translateX(2px);
+       }
+     }
+
+    #mangaligne1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 45vh;
+        margin-bottom:2vh;
+        background-color: transparent;
+    }
+
+    #mangaligne2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 45vh;
+        margin-bottom:2vh;
+        margin-top: 2vh;
+        background-color: transparent;
+    }
+
+    #mangastat1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        width: 35%;
+        margin: 8px;
+
+        position: relative; /* ajout de la position relative pour positionner le pseudo-élément */
+        cursor: pointer;
+        border: black;
+        border-style: solid; 
+    }
+    
+    #mangastat1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("./Image/Manga/UCVNCYSLRRHL7OZLNUFZEL3T3M.jpg");
+        background-size: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.15; /* ajout de l'opacité pour le pseudo-élément */
+    }
+
+    #my_dataviz {
+
+      position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+
+      #mangastat1:hover .info-box {
+        display: block;
+      }
+
+    #statimg1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        width: 25%;
+        padding: 5%;
+        margin: 8px;
+
+        background-image: url("./Image/Manga/image2.jpg");
+        background-size: 100%;
+        background-size: cover;
+        background-position: center;
+
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+    }
+
+    #mangastat2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 40%;
+        margin: 8px;
+        position: relative; /* ajout de la position relative pour positionner le pseudo-élément */
+   
+        border: black;
+        border-style: solid; 
+    }
+
+    #mangastat2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("./Image/Manga/image2.jpg");
+        background-size: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.15; /* ajout de l'opacité pour le pseudo-élément */
+    }
+
+
+    #stat2{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+   
+    #stat2:hover::after {
+      content: attr(title);
+      background-color: #000;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      z-index: 1;
+    }
+    
+    /* Masquer le texte "title" par défaut */
+    #stat2[title] {
+      position: relative;
+    }
+
+    #stat2[title]:hover:after {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+   
+    
+    
+    #mangastat3:hover::after {
+      content: attr(title);
+      background-color: #000;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      z-index: 1;
+    }
+    
+    /* Masquer le texte "title" par défaut */
+    #mangastat3[title] {
+      position: relative;
+    }
+    #mangastat3[title]:hover:after {
+      display: block;
+      font-size: 24px;
+      font-family: 'Bebas Neue', sans-serif;
+
+    }
+  
+    
+#my_dataviz:hover::after {
+  content: attr(title);
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Masquer le texte "title" par défaut */
+#my_dataviz[title] {
+  position: relative;
+}
+#my_dataviz[title]:hover:after {
+  display: block;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
+
+}
+
+
+
+.imgstat {
+  position: relative;
+}
+
+.imgstat-text {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.imgstat:hover .imgstat-text {
+  font-size: 48px;
+
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 1);
+
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+
+}
+
+
+.stattitle {
+  display: none;
+  font-size: 35px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
+  color: rgb(255, 254, 254);
+  text-align: center;
+margin-bottom: 10px;
+}
+
+.imgstat:hover .stattitle {
+  display: block;
+}
+
+.imgstat p{
+  font-size: 20px;
+}
+
+
+#luffyhome{
+    width: 40vw;
+    position: absolute;
+    bottom: 0; /* pour placer l'image en bas */
+    left: 50%; /* pour centrer l'image horizontalement */
+    transform: translateX(-50%);
+
+}
+
+#statimg2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    width: 25%;
+    padding: 5%;
+    margin: 8px;
+
+    background-image: url("./Image/Manga/UCVNCYSLRRHL7OZLNUFZEL3T3M.jpg");
+        background-size: 100%;
+        background-size: cover;
+        background-position: center;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+}
+
+#mangastat3{
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    margin: 8px;
+    width: 35%;
+    padding: 5px;
+    position: relative; /* ajout de la position relative pour positionner le pseudo-élément */
+
+    border: black;
+    border-style: solid; 
+
+    font-size: large;
+    font-weight: bold;
+}
+
+#mangastat3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./Image/Manga/backgroudtest.jpg");
+    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* ajout de l'opacité pour le pseudo-élément */
+}
+
+
+
+#stat3{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+
+
+#statimg3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 35%;
+    padding: 5%;
+    margin: 8px;
+
+    background-image: url("./Image/Manga/backgroudtest.jpg");
+        background-size: 100%;
+        background-size: cover;
+        background-position: center;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+}
+
+
+
+.axislabel{
+
+    font-size: 1.5em;
+    font-weight: bold;
+
+    color: rgb(0, 0, 0);
+    stroke: #f9f9f97b;
+    text-shadow: 2px 2px 4px #e37e3a;
+}
+
+
+.ticklabel{
+
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-style: italic;
+    text-shadow: 2px 2px 4px #b79696;
+}
+
+
+
+#stat3 g {
+    transform: translate(50px, 40px);
+  }
+
+
+
+
+  /*map*/
+
+
+  #sections3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+position: relative;
+    background-color: rgb(0, 0, 0);
+  }
+
+ 
+  .map-tooltip {
+    position: absolute;
+    text-align: left;
+    width: 35vw;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+    background: #fff;
+    border: 0px;
+    border-radius: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+    overflow: auto;
+    max-height: 100%;
+    
+  }
+  
+  .map-tooltip img {
+    max-width: 100%;
+    opacity: 0.8;
+  }
+  
+  
+
+  #map{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mapcotedroit{
+   width:0px
+  }
+  
+  #boussol{
+    position:absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 9999;
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+    border-radius: 40px;
+  }
+ 
+  #mapcontainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url("./Image/Iles/texturemap.jpg");
+  }
+
+
+  #mapcontainer svg {
+
+    position: absolute;
+    top: 10%;
+    left: 0;
+    display:flex;
+    justify-content: top;
+    align-items: top;
+  }
+
+ 
+
+  #mapg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #titremap{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 3em;
+    color: #D7C18B;
+    font-family: 'Bebas Neue', sans-serif;
+
+  }
+
+
+  
+
+  #sections4{
+
+    position:relative;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+
+    background-image: url("./Image/perso/fond.jpg");
+   /* ajout de la position relative pour positionner le pseudo-élément */
+
+   
+  }
+
+
+  #sections4 svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+  #bullescontainer{
+
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #titrebulle{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    background-color: #000000;
+   
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3em;
+    color: #ffffff;
+    
+  }
+
+
+
+#tooltipperso {
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top:35px;
+  width: 100;
+  color:black;
+
+}
+
+.tooltipprime{
+  display: none;
+}
+
+
+#static-image-container {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 9999; /* Set a high z-index value to ensure the container is on top of other elements */
+}
+
+#static-image {
+  width: 170px; /* You can adjust the size of the image according to your needs */
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+  transform: translateX(-50%);
+  z-index: 9999; /* Set a high z-index value to ensure the image is on top of other elements */
+}
+
+
+.statiqueon{
+
+  transform: translateX(-50%);
+ 
+  animation: jump 3s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  25% {
+    transform: translate(-55%, -10px);
+  }
+  50% {
+    transform: translate(-50%, 0);
+  }
+  75% {
+    transform: translate(-45%, -10px);
+  }
+}
+
+#floating-window {
+  position: absolute;
+  bottom: 180px; /* Positionnement au-dessus de l'image */
+  right: 0;
+  width: 400px; /* Vous pouvez ajuster la taille de la fenêtre flottante selon vos besoins */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#floating-window.hidden {
+  opacity: 1;
+  visibility: hidden;
+}
+
+#floating-window.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.floating-window-content.hidden {
+  display: none;
+}
+

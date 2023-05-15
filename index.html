@@ -1,12 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Exercice 3</title>
-</head>
+	<title>One piece Explorer 🌍</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./src/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="./src/index.js" type="module"></script>
+	
+
+
+	<style>
+		.chart-container {
+		  width: 100%;
+		  height: 100vh;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		
+	
+  
+		svg circle{
+		  position: relative;
+		 
+		}
+  
+		.circle img {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+		  object-position: center center;
+		  z-index: -1;
+		}
+  
+	  .circle svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	  }
+	  
+	  </style>
+	</head>
 <body>
-    
-	<script type="module" src="/src/index.js"></script>
-</body>
-</html>
+	
+	<audio id="audio-player" loop>
+		<source src="src/sonOPAmbiant.mp3" type="audio/mpeg"">
+	  </audio>
+	  
+	
+	<div id="container">
+		<div class="section"  data-section="section1">
+		
+			<img id="logoacceuil" src="./src/Image/acceuil/logo.png">
+			<img id="luffyhome" src="./src/Image/acceuil/pseudo.png">
+		</div>
+
+
+		<div class="section" id="sections2"  data-section="section2">
+			
+			<div class="manga" id="mangaligne2">
+				
+				<div class="imgstat" id="statimg2">
+					<div class="imgstat-text">
+						<h4 class="stattitle">Le manga le plus vendu !</h4> 
+					</br>
+					<p>One Piece est un manga créé par Eiichiro Oda en 1997,
+						 qui suit les aventures de Monkey D. Luffy et son équipage 
+						 de pirates à la recherche du One Piece. Avec plus de
+						  480 millions d'exemplaires vendus, One Piece est 
+						  devenu le manga le plus vendu de tous les temps. 
+						  Il est une référence incontournable pour les fans de manga.</p>
+				</div>
+				</div>
+
+
+				<div id="mangastat3" title="Equilibre des forces One Piece">
+					
+					<div id="stat3" ></div>
+				</div>
+
+
+				<div class="imgstat" id="statimg3">
+					<div class="imgstat-text">
+						<h4 class="stattitle">Les forces s'équilibrent</h4>
+					</br>
+					<p>Dans One Piece, l'équilibre des forces repose sur 
+						quatre groupes de personnages puissants : les Yonko, 
+						les Shichibukai, les Amiraux et le gouvernement mondial.
+						 Chaque groupe cherche à étendre son influence pour obtenir 
+						 un avantage stratégique, créant un contexte complexe et 
+						 passionnant pour les fans de la série.</p>
+				</div>
+				</div>
+			
+		</div>
+			<div class="manga" id="mangaligne1">
+
+				<div id="mangastat1">
+
+					<div id="my_dataviz" title="Ventes One piece au Japon" ></div>
+				</div>
+
+				<div  class="imgstat" id="statimg1">
+					<div  class="imgstat-text">
+						<h5 class="stattitle">Plus de 1000 épisodes</h5>
+					</br>
+					<p> La série anime est l'une des plus longues de l'histoire
+						 avec plus de 1000 épisodes publiés. 
+						 Elle suit les aventures de Monkey D. Luffy et de son 
+						 équipage de pirates à la recherche du trésor ultime, le
+						  One Piece. La série anime est devenue une référence
+						   incontournable grâce à ses nombreux personnages
+						    mémorables et ses moments épiques.</p></div>
+				</div>
+
+				<div id="mangastat2">
+
+					<div id="stat2" title="Evolution des sortie d'animé/années"></div>
+				<img id="stat2img" style="width: 100%;">
+				</div>
+			</div>
+			
+			</div>
+
+
+			<div class="section" id="sections3"  data-section="section3">
+				
+				<h2 id="titremap">Carte de l'univers One Piece</h2>
+				<img src="./src/Image/Iles/BOUSSOLE.gif" id="boussol" alt="boussol">
+				<div id="mapcontainer" class="container" >
+				  <svg id="map"class="mape" width="100%" height="100%">
+
+					
+
+				  </svg>
+			
+				</div>
+			</div>
+
+
+			<div class="section" id="sections4"   data-section="section4">
+				<h3 id="titrebulle">Les personnages les plus important de One Piece</h3>
+			
+				  <div class="chart-container" id="bullescontainer">
+					<div class="tooltip-container">
+					  <svg id="bulles"viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet"></svg>
+					</div>
+				  </div>
+				  
+				  
+			</div>
+		
+			<div id="static-image-container">
+				<img id="static-image" src="./src/Image/miniluffy.svg" alt="Description">
+				<div id="floating-window" class="hidden" style="width: 400px; font-size: 15px;">
+						<div id="floating-window-content-section1" class="floating-window-content">
+							<p style="font-size: 19px;">One Piece Explorer: </br>
+								Plongez dans l'univers du manga avec des visualisations interactives ! Faites défiler la page vers le bas pour voir nos visualisations.</p>
+						</div>
+
+						<div id="floating-window-content-section2" class="floating-window-content" >
+							<p style="font-size: 19px;">Découvrez les chiffres clés de l'univers One Piece à travers nos trois graphiques simples mais informatifs. </br></br>
+								Plongez dans les ventes de manga, les sorties annuelles de l'animé et les différentes force existantes dans le monde d'One piece avec nos graphiques interactifs. 
+								Suivez l'évolution de votre série préférée et explorez les données fascinantes de cet anime/manga culte.</p>
+						</div>
+						
+						<div id="floating-window-content-section3" class="floating-window-content">
+							<p style="font-size: 19px;">Partez à l'aventure avec l'équipage de Luffy grâce à notre carte interactive de l'univers One Piece. </br></br>
+								Suivez leurs périples à travers les différentes îles et découvrez les endroits emblématiques de l'histoire de ce manga/anime légendaire. Explorez les lieux et revivez les moments marquants de l'histoire de One Piece avec notre carte interactive. Cette carte a été créée grâce à l'aide d'étudiants de l'HEIG-VD, dont Neib Ouakel et Traversini Sébastien.</p>
+						</div>
+
+
+						<div id="floating-window-content-section4" class="floating-window-content">
+							<p style="font-size: 19px;">Explorez les primes des personnages de One Piece grâce à notre graphique interactif. </br></br>
+								Plongez dans l'univers de One Piece pour découvrir ses personnages les plus redoutables et recherchés, et explorez les figures les plus intrigantes de son histoire.</p>
+						</div>
+						</div>
+				</div>
+			
+			</body>
+
+			</html>
